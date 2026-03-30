@@ -21,10 +21,20 @@ const { workouts, addWorkout } = useWorkouts()
         <h2 class="section-title">Treino</h2>
         <p class="text-slate-500 text-xs mt-0.5">{{ workouts.length }} bloco{{ workouts.length !== 1 ? 's' : '' }} de treino</p>
       </div>
-      <div class="ml-auto">
+      <div class="ml-auto flex items-center gap-2">
         <span class="badge bg-violet-500/15 text-violet-400 border border-violet-500/20">
           Musculação
         </span>
+        <button
+          class="btn-secondary !py-1 !px-2 sm:hidden"
+          title="Adicionar Treino"
+          @click="addWorkout"
+        >
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none"
+               viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M12 4v16m8-8H4" />
+          </svg>
+        </button>
       </div>
     </div>
 
@@ -44,13 +54,15 @@ const { workouts, addWorkout } = useWorkouts()
     </div>
 
     <!-- Add workout -->
-    <button class="btn-secondary mt-4 w-full justify-center py-3" @click="addWorkout">
-      <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none"
-           viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
-        <path stroke-linecap="round" stroke-linejoin="round" d="M12 4v16m8-8H4" />
-      </svg>
-      Adicionar Treino
-    </button>
+    <div class="mt-6">
+      <button class="btn-secondary w-full justify-center py-3.5 shadow-lg shadow-black/10" @click="addWorkout">
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none"
+             viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M12 4v16m8-8H4" />
+        </svg>
+        Adicionar Treino
+      </button>
+    </div>
   </section>
 </template>
 

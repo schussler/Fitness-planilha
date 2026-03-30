@@ -36,7 +36,7 @@ function handleExport() {
     />
 
     <!-- ── MAIN LAYOUT ───────────────────────── -->
-    <main class="max-w-3xl mx-auto px-4 pb-24">
+    <main class="max-w-3xl mx-auto px-4 pb-32 md:pb-24">
 
       <!-- Tab navigation -->
       <nav class="flex gap-1 p-1 bg-dark-800 rounded-xl border border-dark-500 mb-8 sticky top-4 z-20 backdrop-blur-md">
